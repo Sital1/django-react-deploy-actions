@@ -57,7 +57,7 @@ jobs:
       if: github.ref == 'refs/heads/main' && job.status == 'success'
       run: |
         git remote add heroku https://heroku:$HEROKU_API_TOKEN@git.heroku.com/dfh-frontend.git
-        git fetch heroku --prune --unshallow
+        git fetch heroku main
         git subtree push --prefix frontend-heroku heroku main
         
 
