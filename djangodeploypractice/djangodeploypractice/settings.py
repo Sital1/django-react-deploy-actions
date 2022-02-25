@@ -31,6 +31,13 @@ DEBUG = False
 
 ALLOWED_HOSTS = ['serene-scrubland-55953.herokuapp.com', '*']
 
+CORS_ORIGIN_ALLOW_ALL = False
+
+CORS_ORIGIN_WHITELIST = (
+
+       'serene-scrubland-55953.herokuapp.com',
+
+)
 
 # Application definition
 
@@ -49,6 +56,7 @@ INSTALLED_APPS = [
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'whitenoise.middleware.WhiteNoiseMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
