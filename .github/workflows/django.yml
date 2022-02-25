@@ -58,10 +58,9 @@ jobs:
         HEROKU_APP_NAMES: ${{ secrets.HEROKU_FRONTEND_APP_NAME }}
       if: github.ref == 'refs/heads/main' && job.status == 'success'
       run: |
-        git remote remove heroku
         echo ${{ secrets.HEROKU_FRONTEND_APP_NAME }}
         git remote add heroku https://heroku:$HEROKU_API_TOKEN@git.heroku.com/$HEROKU_APP_NAMES.git
-        git herokus checkout main
+        git heroku checkout main
         git add *
         git commit -a -m "local file server commit message"
         git fetch heroku main
