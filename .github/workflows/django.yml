@@ -57,8 +57,8 @@ jobs:
         HEROKU_APP_NAME: ${{ secrets.HEROKU_FRONTEND_APP_NAME }}
       if: github.ref == 'refs/heads/main' && job.status == 'success'
       run: |
+        echo secrets.HEROKU_FRONTEND_APP_NAME
         git remote add herokus https://heroku:$HEROKU_API_TOKEN@git.heroku.com/$HEROKU_APP_NAME.git
-        git pull herokus main --ff-only
         git subtree push --prefix frontend-heroku herokus main
         
 
