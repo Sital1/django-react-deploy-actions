@@ -4,7 +4,7 @@ const App = () => {
   const [movies, setMovies] = useState([]);
 
   useEffect(() => {
-    fetch("movies/list", {
+    fetch("/movies/list", {
       method: "GET",
       headers: {
         Accept: "application/json",
