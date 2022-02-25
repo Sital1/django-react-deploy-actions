@@ -65,7 +65,7 @@ jobs:
         git commit -a -m "local file server commit message"
         git fetch heroku main
         git merge -s recursive -X theirs heroku/main
-        git subtree push --prefix frontend-heroku herokus main
+        git subtree push --prefix frontend-heroku heroku main
         
 
         
