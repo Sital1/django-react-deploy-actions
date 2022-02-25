@@ -45,6 +45,8 @@ jobs:
         # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
 
     steps:
+    - run: |
+        git fetch --prune --unshallow
     - uses: actions/checkout@v2
     - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v2
@@ -58,8 +60,7 @@ jobs:
       if: github.ref == 'refs/heads/main' && job.status == 'success'
       run: |
         git remote add herokus https://heroku:$HEROKU_API_TOKEN@git.heroku.com/$HEROKU_APP_NAME.git
-        git pull herokus main
-        git herokus rebase
+        git pull herokus main --ff-only
         git subtree push --prefix frontend-heroku herokus main
         
 
