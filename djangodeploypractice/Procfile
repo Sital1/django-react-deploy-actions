@@ -1,1 +1,2 @@
+release: python manage.py migrate
 web: gunicorn djangodeploypractice.wsgi —-log-file -
