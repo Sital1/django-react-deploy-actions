@@ -35,5 +35,5 @@ jobs:
       if: github.ref == 'refs/heads/main' && job.status == 'success'
       run: |
         git remote add heroku https://heroku:$HEROKU_API_TOKEN@git.heroku.com/$HEROKU_APP_NAME.git
-        git subtree push -- prefix djangodeploypractice main HEAD:main
+        git subtree push --prefix djangodeploypractice heroku main 
  
