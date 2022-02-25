@@ -29,13 +29,14 @@ SECRET_KEY = 'django-insecure-c4sf!6awo+_1jp-x(zu#ul^&qp8c4!075j(f1(c64n!+3z%#bu
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['serene-scrubland-55953.herokuapp.com', '*']
+ALLOWED_HOSTS = ['https://serene-scrubland-55953.herokuapp.com', '*', 'https://dfh-frontend.herokuapp.com/']
 
 CORS_ORIGIN_ALLOW_ALL = False
 
 CORS_ORIGIN_WHITELIST = (
 
-       'serene-scrubland-55953.herokuapp.com',
+       'https://serene-scrubland-55953.herokuapp.com',
+       'https://dfh-frontend.herokuapp.com/'
 
 )
 
