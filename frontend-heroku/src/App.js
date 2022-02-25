@@ -4,7 +4,7 @@ const App = () => {
   const [movies, setMovies] = useState([]);
 
   useEffect(() => {
-    fetch("https://dashboard.heroku.com/apps/dfh-frontend/movies/list", {
+    fetch("https://serene-scrubland-55953.herokuapp.com/movies/list", {
       method: "GET",
       headers: {
         Accept: "application/json",
