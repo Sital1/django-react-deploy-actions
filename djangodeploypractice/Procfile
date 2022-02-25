@@ -1,1 +1,1 @@
-web:gunicorn djangodeploypractice.wsgi —-log-file -
+web: gunicorn djangodeploypractice.wsgi —-log-file -
